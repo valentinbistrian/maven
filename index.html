@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website Title</title>
+    <style>
+        /* Add custom CSS styles here */
+    </style>
+     <script src="min.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+            <script src="main.js"></script>
+     <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div id="loader-wrapper">
+                
+        <div class="loader">
+         
+            
+VeloxVision
+
+
+
+
+
+
+         
+        </div>
+        
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    
+    <video autoplay muted loop id="video-bg">
+        <source src="2.mp4" type="video/mp4">
+    </video>
+    <div class="text-container">
+        <div class="image-container" data-hover-text="220 lei">
+        <h1>Maven</h1>
+        <img src="1.png" alt="Description of your image">
+    </div>
+</div>
+    <style>
+    /* Set the video background to cover the whole page */
+    @font-face {
+        font-family: "911";
+        src: url("911.ttf") format("truetype"); /* Replace "YourFontFile.ttf" with the actual font file name and extension */
+    }
+    @font-face {
+        font-family: "minimal";
+        src: url("minimal.otf") format("truetype"); /* Replace "YourFontFile.ttf" with the actual font file name and extension */
+    }
+    #video-bg {
+        position: fixed;
+        right: 0;
+        bottom: -1200px;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        filter: blur(10px);
+    }
+    
+    /* Apply a blur effect to the video */
+    #video-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 5); /* Adjust the opacity to control blur intensity */
+        backdrop-filter: blur(12px); /* Adjust the blur radius as desired */
+        z-index: 0;
+    }
+    
+    /* Center the text vertically and horizontally */
+    .text-container {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: ;
+        text-align: center;
+        color: white; /* Adjust the text color as needed */
+        font-family: "911";
+        font-size: 50px;
+    }
+    
+.text-container::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: glitter 2s infinite;
+  opacity: 0;
+}
+
+@keyframes text-container {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+    .text-container img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        margin-top: 20px; /* Adjust the margin as desired */
+        width: 600px; /* Adjust the width of the image */
+        height: auto; /* Maintain the aspect ratio */
+        transition: transform 0.3s,filter 0.3s; /* Add smooth transition effect */
+    }
+    .text-container img:hover {
+        transform: translateX(-50%) scale(1.2);
+        filter: blur(5px); /* Adjust the scale value to increase or decrease the image size */
+    }
+
+    .text-container .image-container::after {
+        content: attr(data-hover-text); /* Retrieve the text from the 'data-hover-text' attribute */
+        position: absolute;
+        font-family: "minimal";
+        top: 200%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0); /* Set initial scale to 0 */
+        font-size: 40px; /* Adjust the font size as desired */
+        color: black; /* Adjust the text color as needed */
+        transition: transform 0.3s;
+        white-space: nowrap; /* Prevent line breaks within the text */
+    }
+
+    .text-container .image-container:hover::after {
+        transform: translate(-50%, -50%) scale(1); /* Scale the text to 1 on hover */
+    }
+    .text-container .image-container::before {
+        content: "BUY";
+        font-family: "minimal";
+        z-index: 1;
+        position: absolute;
+        bottom: -320px; /* Adjust the distance from the text */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 16px;
+        background-color: #1d1d1d; /* Adjust the background color */
+        color: white; /* Adjust the text color */
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .text-container .image-container:hover::before {
+        opacity: 1;
+    }
+   
+    
+</style>
+<script>
+    var _gaq=[['_setAccount','UA-839919-3'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+</body>
+</html>
